@@ -9,11 +9,6 @@ add_library(catquote_data STATIC
 )
 
 target_include_directories(${PROJECT_NAME}
-        PRIVATE
-        ../thirdparty/rapidjson/include
-)
-
-target_include_directories(${PROJECT_NAME}
     PUBLIC
         include
 )
