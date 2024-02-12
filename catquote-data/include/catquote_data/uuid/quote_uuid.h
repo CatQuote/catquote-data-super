@@ -1,6 +1,7 @@
 #ifndef CATQUOTE_DATA_SUPER_QUOTE_UUID_H
 #define CATQUOTE_DATA_SUPER_QUOTE_UUID_H
 
+#include <cstdint>
 #include <vector>
 #include <catquote_data/math/util/quote_positional_notation_converter.h>
 
