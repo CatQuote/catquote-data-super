@@ -15,7 +15,5 @@ std::vector<uint8_t> QuoteUUIDv4Generator::genRandomUUIDv4Bytes() {
 }
 
 QuoteUUID QuoteUUIDv4Generator::genRandomUUIDv4() {
-    return {
-        genRandomUUIDv4Bytes()
-    };
+    return QuoteUUID(genRandomUUIDv4Bytes());
 }

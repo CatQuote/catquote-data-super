@@ -4,13 +4,13 @@ Quote::Quote() {
     this->valid = false;
 }
 
-Quote::Quote(int quote_id, std::string quote_text) {
+Quote::Quote(QuoteUUID quote_id, std::string quote_text) {
     this->m_quote_id = quote_id;
     this->m_quote_text = quote_text;
     this->updateValid();
 }
 
-int Quote::quote_id() const{
+QuoteUUID Quote::quote_id() const{
     return this->m_quote_id;
 }
 
@@ -18,7 +18,7 @@ std::string Quote::quote_text() const {
     return this->m_quote_text;
 }
 
-void Quote::quote_id(int id) {
+void Quote::quote_id(QuoteUUID id) {
     this->m_quote_id = id;
     this->updateValid();
 }
@@ -33,5 +33,5 @@ bool Quote::isValid() const {
 }
 
 void Quote::updateValid() {
-    this->valid = this->m_quote_id >= 0 && !this->m_quote_text.empty();
+    this->valid = !this->m_quote_text.empty();
 }

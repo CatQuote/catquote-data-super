@@ -11,7 +11,7 @@ protected:
     QuoteVector vec;
 
 public:
-    void pushBackQuote(int quote_id, const char *quote_text);
+    void pushBackQuote(QuoteUUID quote_id, const char *quote_text);
     void pushBackQuote(Quote quote);
     void popBackQuote();
     QuoteVector asVector() const;

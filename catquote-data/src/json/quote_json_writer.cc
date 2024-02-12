@@ -10,11 +10,9 @@ void QuoteJsonWriter::asString(std::string &ret) const {
     doc.SetArray();
     for(auto &v : this->asVector().getVector()){
         rapidjson::Value sub_val;
-        std::string text = v.quote_text();
-        rapidjson::Value quote_id_val(v.quote_id());
         sub_val.SetObject();
-        sub_val.AddMember("quote_id", quote_id_val, a);
-        sub_val.AddMember("quote_text", text, a);
+        sub_val.AddMember("quote_id", v.quote_id().getString(), a);
+        sub_val.AddMember("quote_text", v.quote_text(), a);
         rapidjson::SetValueByPointer(doc, "/-", sub_val);
     }
     rapidjson::StringBuffer buffer;

@@ -4,7 +4,7 @@ QuoteWriter::QuoteWriter() {
 
 }
 
-void QuoteWriter::pushBackQuote(int quote_id, const char *quote_text) {
+void QuoteWriter::pushBackQuote(QuoteUUID quote_id, const char *quote_text) {
     this->pushBackQuote(Quote(quote_id, quote_text));
 }
 
